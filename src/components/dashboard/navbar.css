@@ -1,0 +1,136 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #0d1117;
+  border-bottom: 1px solid #30363d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Added gap between logo and text */
+}
+
+.site-logo {
+  width: 32px; /* Fixed oversized logo */
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f0f6fc;
+  letter-spacing: -0.5px;
+  transition: opacity 0.2s ease; /* Smooth text fade */
+}
+
+.navbar-right {
+  display: flex;
+  gap: 24px;
+  align-items: center; /* Better vertical alignment */
+}
+
+.nav-link {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex; /* For better icon alignment */
+  align-items: center;
+  gap: 6px; /* Space between icon and text */
+}
+
+.nav-link:hover {
+  color: #f0f6fc;
+  background-color: rgba(110, 118, 129, 0.1);
+}
+
+.nav-link.active {
+  color: #f0f6fc;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #f78166;
+}
+
+/* Added icon styling */
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 16px;
+  }
+  
+  .logo-text {
+    font-size: 18px; /* Better scaling */
+    opacity: 1; /* Keep text visible */
+  }
+  
+  .navbar-right {
+    gap: 12px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+  
+  .nav-link.active::after {
+    bottom: -13px;
+  }
+
+  .nav-link span {
+    display: inline; /* Keep text visible */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 6px;
+  }
+  
+  .site-logo {
+    height: 24px;
+    width: 24px;
+  }
+
+  .logo-text {
+    font-size: 16px; /* Better mobile scaling */
+  }
+
+  .nav-link span {
+    display: none; /* Hide text on smallest screens */
+  }
+
+  .nav-icon {
+    width: 20px; /* Larger icons for mobile */
+    height: 20px;
+  }
+}
