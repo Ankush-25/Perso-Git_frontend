@@ -24,13 +24,13 @@ const Profile = () => {
       if (userId) {
         try {
           const response = await axios.get(
-            `http://52.90.195.7:3000//userProfile/${userId}`
+            `http://52.90.195.7:3000/userProfile/${userId}`
           );
           setUserDetails(response.data);
           
           // Fetch additional user stats
           const reposResponse = await axios.get(
-            `http://52.90.195.7:3000//repo/Current/${userId}`
+            `http://52.90.195.7:3000/repo/Current/${userId}`
           );
           setReposCount(reposResponse.data.length || 0);
           
