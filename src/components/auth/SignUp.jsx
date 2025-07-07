@@ -16,7 +16,7 @@ function SignUp() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("https://52.90.195.7:443/signup/", {
+      const res = await axios.post("https://localhost:3000/signup/", {
         email: email,
         password: password,
         username: username
