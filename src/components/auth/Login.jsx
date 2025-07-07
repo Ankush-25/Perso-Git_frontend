@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("52.90.195.7/login/", {
+      const res = await axios.post("52.90.195.7:3000/login/", {
         email: email,
         password: password,
       });
