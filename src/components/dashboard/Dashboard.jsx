@@ -12,7 +12,7 @@ const Dashboard = () => {
       const userId = localStorage.getItem("userId");
       const fetchRepositories = async () => {
         const response = await fetch(
-          `http://localhost:3000/repo/Current/${userId}`
+          `44.204.66.161/repo/Current/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     try {
       const fetchSuggestedRepositories = async () => {
-        const response = await fetch(`http://localhost:3000/repo/all`);
+        const response = await fetch(`44.204.66.161/repo/all`);
         const data = await response.json();
         setSuggestedRepo(data);
       };
