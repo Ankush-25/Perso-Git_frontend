@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("https://localhost:3000/login/", {
+      const res = await axios.post("https://perso-git-backend.onrender.com/login/", {
         email: email,
         password: password,
       });

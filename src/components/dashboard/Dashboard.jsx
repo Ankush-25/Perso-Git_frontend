@@ -12,7 +12,7 @@ const Dashboard = () => {
       const userId = localStorage.getItem("userId");
       const fetchRepositories = async () => {
         const response = await fetch(
-          `https://localhost:3000/repo/Current/${userId}`
+          `https://perso-git-backend.onrender.com/repo/Current/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
@@ -24,7 +24,7 @@ const Dashboard = () => {
 
     try {
       const fetchSuggestedRepositories = async () => {
-        const response = await fetch(`https://localhost:3000/repo/all`);
+        const response = await fetch(`https://perso-git-backend.onrender.com/repo/all`);
         const data = await response.json();
         setSuggestedRepo(data);
       };

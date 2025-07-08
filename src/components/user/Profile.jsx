@@ -24,13 +24,13 @@ const Profile = () => {
       if (userId) {
         try {
           const response = await axios.get(
-            `https://localhost:3000/userProfile/${userId}`
+            `https://perso-git-backend.onrender.com/userProfile/${userId}`
           );
           setUserDetails(response.data);
           
           // Fetch additional user stats
           const reposResponse = await axios.get(
-            `https://localhost:3000/repo/Current/${userId}`
+            `https://perso-git-backend.onrender.com/repo/Current/${userId}`
           );
           setReposCount(reposResponse.data.length || 0);
           
